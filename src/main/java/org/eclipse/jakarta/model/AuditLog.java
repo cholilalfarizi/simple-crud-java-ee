@@ -7,6 +7,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
@@ -39,6 +41,10 @@ public class AuditLog {
 
     @Column(nullable = false)
     private String actor;
+
+    @ManyToOne
+    @JoinColumn(name = "username", referencedColumnName = "username")
+    private UserPrincipal userPrincipal;
 
     public String getId() {
         return id.toString();

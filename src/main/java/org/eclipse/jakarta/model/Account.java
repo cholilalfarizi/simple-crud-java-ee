@@ -52,9 +52,10 @@ public class Account {
     @Column(name = "modified_at")
     @Getter(value = AccessLevel.NONE)
     private Timestamp modifiedAt;
+
     @ManyToOne
-    @JoinColumn(name = "user_detail_id", referencedColumnName = "id")
-    private UserDetail userDetail;
+    @JoinColumn(name = "user_principal_id", referencedColumnName = "id")
+    private UserPrincipal userPrincipal;
 
     public String getId() {
         return id.toString();

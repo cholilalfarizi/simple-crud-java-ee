@@ -17,7 +17,7 @@ public class AuditLogResource {
     private AuditLogDAO auditLogDAO;
 
     @GET
-    @Produces({ MediaType.APPLICATION_JSON })
+    @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
     public Response getAll() {
         return Response.ok(auditLogDAO.getAll()).build();
     }

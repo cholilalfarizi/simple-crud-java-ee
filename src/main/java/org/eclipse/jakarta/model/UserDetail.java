@@ -58,9 +58,6 @@ public class UserDetail {
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private UserPrincipal userPrincipal;
 
-    @OneToOne(mappedBy = "userDetail")
-    private Account account;
-
     public String getId() {
         return id.toString();
     }

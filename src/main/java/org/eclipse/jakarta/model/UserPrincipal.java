@@ -55,6 +55,9 @@ public class UserPrincipal {
     @OneToOne(mappedBy = "userPrincipal")
     private UserDetail userDetail;
 
+    @OneToOne(mappedBy = "userPrincipal")
+    private Account account;
+
     public String getId() {
         return id.toString();
     }
