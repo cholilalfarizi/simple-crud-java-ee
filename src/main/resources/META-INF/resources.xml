@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+    <Resource id="PostgresDS" type="javax.sql.DataSource">
+        JdbcDriver = org.postgresql.Driver
+        JdbcUrl = jdbc:postgresql://localhost:5432/latihan_java_ee
+        UserName = postgres
+        Password = admin123
+        jtaManaged = true
+    </Resource>
+</tomee>
